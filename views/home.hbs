@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  {{> head}}
+  <body>
+    {{> header}}
+    <p>Some text here</p>
+    <script type="text/javascript">
+      document.write(getDate());
+    </script>
+    <p>{{screamIt welcomeMessage}}</p>   <!-- Call a helper with arguments by separating helper name from argument with a space as well as subsequent arguments -->
+    {{> footer}}    <!-- Use a partial by enclosing it in double curly braces and prefixing its filename with the greater than operator followed by a space (do not need file extension (.hbs)) -->
+  </body>
+</html>
