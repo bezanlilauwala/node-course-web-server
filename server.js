@@ -39,11 +39,11 @@ app.use((req, res, next) => {
 });
 
 //Create middleware that takes user to a maintenance page
-app.use((req, res, next) => {
-  res.render('maintenance.hbs', {
-    pageTitle: 'Maintenance Page'   //Use locals in template page (.hbs file) by enclosing local name within doublde curly braces {{pageTitle}}
-  });
-});
+// app.use((req, res, next) => {
+//   res.render('maintenance.hbs', {
+//     pageTitle: 'Maintenance Page'   //Use locals in template page (.hbs file) by enclosing local name within doublde curly braces {{pageTitle}}
+//   });
+// });
 
 //Register a helper (helper function is called wherever helper is used) called using {{getCurrentYear}}
 hbs.registerHelper('getCurrentYear', () => {
