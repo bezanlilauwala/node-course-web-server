@@ -14,6 +14,9 @@ const express = require('express');
 const hbs = require('hbs');   //hbs is a view engine (all hbs views must use the .hbs extension)
 const fs = require('fs');
 
+//Configure port variable to process.env.PORT or 3000 if the variable does not exist.
+const port = process.env.PORT || 3000;
+
 //Create express application (app)
 let app = express();
 
@@ -79,6 +82,6 @@ app.get('/random', (req, res) => {
   res.send('<p>This is a random page</p>');
 });
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 }); //Open localhost:3000 to view
